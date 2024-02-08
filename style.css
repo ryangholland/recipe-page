@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 /* Custom Props */
 
@@ -22,6 +22,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 img {
@@ -29,10 +30,118 @@ img {
   max-width: 100%;
 }
 
+/* Utility */
+
+.flow-content > * + * {
+  margin-top: 1.25rem;
+}
+
+.bold-text {
+  font-weight: 600;
+}
+
+.border-top {
+  border-top: 1px solid var(--neutral-light-grey);
+}
+
 /* General */
 
 body {
   font-family: "Outfit", "Arial", sans-serif;
+  background-color: var(--neutral-eggshell);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.85rem;
+}
+
+li::marker {
+  font-weight: bold;
+}
+
+/* Recipe */
+
+.recipe-container {
+  width: 700px;
+  margin-block: 2rem;
+  margin-inline: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  background-color: var(--neutral-white);
+  color: var(--neutral-dark-charcoal);
+}
+
+.recipe-container img {
+  border-radius: 1rem;
+}
+
+.recipe-container h1,
+.recipe-container h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+
+.recipe-container h2,
+.recipe-container li::marker {
+  color: var(--primary-nutmeg);
+}
+
+.recipe-container li {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+.preparation-container {
+  padding: 1rem;
+  background-color: var(--neutral-rose-white);
+  margin-block: 2rem;
+}
+
+.preparation-container h3,
+.preparation-container li::marker {
+  color: var(--primary-dark-raspberry);
+}
+
+.recipe-container hr {
+  margin-block: 2.25rem;
+}
+
+.recipe-container table {
+  width: 100%;
+}
+
+.recipe-container caption {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.recipe-container th,
+.recipe-container td {
+  padding: 10px 30px;
+  text-align: left;
+}
+
+.recipe-container th {
+  font-weight: 400;
+}
+
+.recipe-container td {
+  font-weight: 700;
+  color: var(--primary-nutmeg);
+}
+
+@media only screen and (max-width: 700px) {
+  .recipe-container {
+    width: auto;
+    margin-block: 0;
+    border-radius: 0;
+  }
 }
 
 /* Attribution */
@@ -40,6 +149,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-block: 1rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
